@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/global/favicon.ico" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Amatic+SC|Ubuntu|Gayathri|Indie+Flower|Rajdhani|Sacramento|Ubuntu+Condensed|Arimo|Bree+Serif&display=swap"
+        rel="stylesheet" />
+    <title>Dog API</title>
+</head>
+
+<body class="home">
+    <header class="index-header flex-r col-d-12">
+        <div class="flex-r-d">
+            <div id="logo" class="col-m-6 col-d-4 flex-r">
+                <img src="img/global/logos/pata-logo.png" alt="Logo" class="col-m-3 col-d-1">
+                <a href="index.html" class="n-tedit">
+                    <strong id="text-logo" class="ubuntu-condensed">
+                        <h1>Adote seu amigo!</h1>
+                    </strong>
+                </a>
+            </div>
+            <div id="menu" class="col-m-2" onclick="toggleMenu();">
+                <img src="img/global/icons/menu.png" alt="Menu" class="menu-icon col-m-8">
+                <div id="sub-menu" class="submenu disabled" class="col-m-12">
+                    <div onclick="closeMenu();">
+                        <img src="img/global/icons/x.png" alt="close button" class="col-m-1 closebutton" id="close-button" onclick="closeMenu();">
+                    </div>
+                    <ul class="flex-r arimo">
+                        <li onclick="adicionarAttrA();">
+                            <a href="#section-2" class="n-tedit">
+                                Sobre nós
+                            </a>
+                        </li>
+                        <li onclick="adicionarAttrB();">
+                            <a href="#section-3" class="n-tedit">
+                                Adoção
+                            </a>
+                        </li>
+                        <li onclick="adicionarAttrC();">
+                            <a href="#section-4" class="n-tedit">
+                                Equipe
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul class="flex-r arimo">
+                    <li onclick="adicionarAttrA();">
+                        <a href="#section-2" class="n-tedit">
+                            Sobre nós
+                        </a>
+                    </li>
+                    <li onclick="adicionarAttrB();">
+                        <a href="#section-3" class="n-tedit">
+                            Adoção
+                        </a>
+                    </li>
+                    <li onclick="adicionarAttrC();">
+                        <a href="#section-4" class="n-tedit">
+                            Equipe
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="tel-info col-m-11 arimo flex-r center-block col-d-2"><span>LIGUE: (11) 9999-9999</span></div>
+        </div>
+    </header>
+    <section class="col-m-12 col-d-12 flex-r section-1">
+        <a href="adote.html" class="link-adote n-tedit col-m-12 col-d-8 flex-c">
+            <div>
+                <div class="title-so arimo col-m-10 col-d-2 flex-r bree-serif b">Me adota?</div>
+                <div class="flex-r"><span class="text-section arimo b">CLIQUE AQUI E ME ADOTE !</span></div>
+            </div>
+            <img src="img/custom/pictures/cachorro-1.jpg" alt="Imagem Cachorro" class="picture-so col-m-11 col-d-5 col-t-6">
+        </a>
+    </section>
+    <section class="col-m-12 col-d-12 section-2 space-bottom">
+        <article>
+            <a id="options"></a>
+            <details id="details-a">
+                    <summary class="ubuntu-condensed space-bottom b">Não nos conhece?</summary>
+                <div class="flex-c">
+                    <a id="section-2" class="flex-c">
+                        <div class="description ubuntu-condensed col-m-11 col-d-11 b"><cite>Me adota?</cite> &nbsp; é
+                            uma
+                            ONG (Organização Não Governamental), sem
+                            fins lucrativos, e que nasceu de um grande sonho do seu atual presidente: tirar o maior
+                            número
+                            possível de
+                            animais das ruas, dar tratamento adequado e integrá-los a famílias que lhes deem amor,
+                            carinho e
+                            uma vida
+                            digna. Mas, chegar até aqui, não foi fácil. Há sete anos atrás, em 2005, o que era sonho
+                            começou
+                            a se tornar
+                            realidade.</div>
+                        <figure class="flex-c">
+                            <img src="img/custom/pictures/cachorro-3.jpg" alt="Centro de cuidado"
+                                class="col-m-12 col-d-6">
+                            <figcaption>Nosso último evento de adoção dos nossos dogs! <i class="fas fa-dog"></i>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </details>
+        </article>
+    </section>
+    <section class="col-m-12 col-d-12 section-3 space-bottom">
+        <article>
+            <details id="details-b">
+                <summary class="ubuntu-condensed space-bottom b">Como adotar?</summary>
+                <div class="flex-c">
+                    <a id="section-3" class="flex-c">
+                        <figure class="flex-c">
+                            <figcaption class="ubuntu-condensed">Adotar um animal é um ato de amor &nbsp; <i
+                                    class="fas fa-heart"></i>
+                            </figcaption>
+                            <img src="img/custom/pictures/cachorro-4.jpg" alt="Centro de cuidado"
+                                class="col-m-12 col-d-12">
+                        </figure>
+                        <div class="description space-bottom ubuntu-condensed col-m-11 col-d-11 b">Agradecemos seu
+                            interesse
+                            em adotar um cão sem dono. Mas,
+                            se você tem interesse em adotar um dos nossos cães, precisamos saber um pouco mais de você,
+                            pois
+                            do ponto de
+                            vista do animal, ser abandonado pelo amigo é muito doloroso… e eles já sofreram isso uma vez
+                            e
+                            não queremos
+                            que isso se repita. Eles não merecem ser tratados com desprezo.
+                            Sendo assim, abaixo você encontrará um LINK com um formulário de Cadastro. Ela deverá ser
+                            totalmente preenchida
+                            e o nome do cão de interesse citado. Após análise, entraremos em contato com você.</div>
+                        <a href="adote.html" class="n-tedit">
+                            <div id="form-link" class="form-dog col-d-12 col-m-12 arimo flex-r center-block">PREENCHER FORMULÁRIO!</div>
+                        </a>
+                </div>
+            </details>
+        </article>
+    </section>
+    <section class="col-m-12 col-d-12 section-4 space-bottom">
+        <article>
+            <details id="details-c">
+                <summary class="our-team ubuntu-condensed space-bottom b">Nosso time</summary>
+                <a id="section-4" class="flex-c">
+                    <div class="description space-bottom ubuntu-condensed col-m-11 col-d-11 flex-c b">
+                        <q>Formamos um grupo de amigos e voluntários empenhados na luta contra o abandono de animais e
+                            iniciamos o trabalho
+                            com realização de mutirões de castração em comunidades carentes e auxílio, propriamente
+                            dito,
+                            aos cães abandonados,
+                            a maioria deles por nós resgatados, tratados em veterinários e posteriormente levados às
+                            feiras
+                            de adoção por nós
+                            organizadas.</q> - <em>Thadeu Cesário, presidente da ONG.</em>
+                    </div>
+                </a>
+            </details>
+        </article>
+    </section>
+    <section>
+
+    </section>
+    <footer>
+        <div class="contact ubuntu position-r">
+            <div class="list-contact col-m-12 b">Contato</div>
+            <div class="col-m-12 txtalign-center space-bottom">
+                <p class="tel-info-footer b">Telefone</p>
+                <span>(11) 9999-9999</span>
+            </div>
+            <div class="col-m-12 txtalign-center space-bottom">
+                <p class="mail-info b"> Email</p>
+                <span>info@meusite.com</span>
+            </div>
+            <div class="col-m-12 txtalign-center space-bottom">
+                <p class="hour-info b"> Horário</p>
+                <span>Seg - Sex: 9:00 - 20:00 <br /> Sáb: 9:00 - 16:00</span>
+            </div>
+            <div class="col-m-12 txtalign-center space-bottom">
+                <p class="locale-info b">Área de Serviço</p>
+                <span>São Paulo e interior</span>
+            </div>
+            <div class="col-m-12 flex-r social-media">
+                <div class="space-media" onclick="socialNetwork()"><a href="#"></a><i class="fab fa-facebook"></a></i></div>
+                <div class="space-media" onclick="socialNetwork()"><a href="#"></a><i class="fab fa-twitter"></a></i></div>
+                <div class="space-media" onclick="socialNetwork()"><a href="#"></a><i class="fab fa-youtube"></a></i></div>
+                <div class="space-media" onclick="socialNetwork()"><a href="#"></a><i class="fab fa-linkedin"></a></i></div>
+            </div>
+            <img src="img/custom/pictures/cachorro-2.png" alt="Cachorro-rodapé"
+                class="col-m-8 col-d-2 col-t-5 position-a footer-img">
+        </div>
+        <script src="js/script.js"></script>
+    </footer>
+</body>
+
+</html>

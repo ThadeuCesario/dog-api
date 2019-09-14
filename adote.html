@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/global/favicon.ico" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Amatic+SC|Ubuntu|Gayathri|Indie+Flower|Rajdhani|Sacramento|Ubuntu+Condensed|Arimo|Bree+Serif&display=swap"
+        rel="stylesheet" />
+    <title>Dog API</title>
+</head>
+
+<body class="adote">
+        <header class="index-header flex-r col-d-12">
+                <div class="flex-r-d">
+                    <div id="logo" class="col-m-6 col-d-4 flex-r">
+                        <img src="img/global/logos/pata-logo.png" alt="Logo" class="col-m-3 col-d-1">
+                        <a href="index.html" class="n-tedit">
+                            <strong id="text-logo" class="ubuntu-condensed">
+                                <h1>Adote seu amigo!</h1>
+                            </strong>
+                        </a>
+                    </div>
+                    <div id="menu" class="col-m-2" onclick="toggleMenu();">
+                        <img src="img/global/icons/menu.png" alt="Menu" class="menu-icon col-m-8">
+                        <div id="sub-menu" class="submenu disabled" class="col-m-12">
+                            <div onclick="closeMenu();">
+                                <img src="img/global/icons/x.png" alt="close button" class="col-m-1 closebutton" id="close-button" onclick="closeMenu();">
+                            </div>
+                            <ul class="flex-r arimo">
+                                <li>
+                                    <a href="index.html#options" class="n-tedit">
+                                        Sobre nós
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html#options" class="n-tedit">
+                                        Adoção
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html#options" class="n-tedit">
+                                        Equipe
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <nav class="nav-menu">
+                        <ul class="flex-r arimo">
+                            <li>
+                                <a href="index.html#options" class="n-tedit">
+                                    Sobre nós
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#options" class="n-tedit">
+                                    Adoção
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#options" class="n-tedit">
+                                    Equipe
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="tel-info col-m-11 arimo flex-r center-block col-d-2"><span>LIGUE: (11) 9999-9999</span></div>
+                </div>
+            </header>
+    <section class="col-m-12 arimo" id="adote-section-1">
+        <div class="date-form">
+            <p class="space-bottom-short b">Preencha o formulário abaixo e aguarde nosso contato.</p>
+            <p class="space-bottom b">Em caso de aprovação, lhe daremos uma foto para se recordar para sempre desse momento!</p>
+        </div>
+    </section>
+    <section class="form-don space-bottom col-d-4 col-t-8 center-block">
+        <form id="adote-form-1">
+            <fieldset>
+                <legend class="ubuntu b">Formulário de Adoção</legend>
+                <span class="input-name space-bottom-short">Insira seu nome</span>
+                <input id="name-user" type="text" name="nome" class="space-bottom" placeholder="Ex: Marcelo">
+                <span class="space-bottom-short">Insira o número de seu celular</span>
+                <input type="tel" id="phone-user" name="phone" pattern="[0-9]{11}" placeholder="Ex: 11999999999" class="space-bottom">
+                <span class="space-bottom-short">Escolha a raça de seu cachorro</span>
+                <select id="dog-dropdown" name="dog" class="space-bottom"></select>
+                <span class="space-bottom-short">Insira o nome de seu cachorro</span>
+                <input id="value-name" class="space-bottom" type="text" name="dog-name" placeholder="Ex: Bidu">
+                <span class="space-bottom-short">Escolha a fonte da letra para a foto de seu cachorro</span>
+                <select id="font-type" class="space-bottom">
+                    <option value="none"> Selecione uma fonte</option>
+                    <option value="gayathri">Gayathri</option>
+                    <option value="indie-flower">Indie Flower</option>
+                    <option value="amatic-sc">Amatic SC</option>
+                    <option value="rajdhani">Rajdhani</option>
+                    <option value="sacramento">Sacramento</option>
+                </select>
+                <span class="space-bottom-short">Escolha a cor da letra</span>
+                <select id="color-name" class="space-bottom">
+                    <option value="none">Selecione uma cor</option>
+                    <option value="vermelho">Vermelho</option>
+                    <option value="verde">Verde</option>
+                    <option value="azul">Azul</option>
+                    <option value="preto">Preto</option>
+                    <option value="roxo">Roxo</option>
+                </select>
+                <br />
+                <div class="buttons flex-r">
+                    <button id="btn-save" onclick="registrarDados();">Salvar</button>
+                    <button id="btn-clear" onclick="limparDados();">Limpar</button>
+                </div>
+            </fieldset>
+        </form>
+        <div id="alert-sucess" class="alert success" style="display: none">
+            <span class="closebtn">&times;</span>
+            <strong>Successo!</strong> Já registramos seu formulário.
+        </div>
+    </section>
+    <section class="your-dog flex-c space-bottom-long col-m-12">
+        <div id="border-image" class="col-m-10 col-d-4">
+            <div id="name-insert" class="col-m-10 flex-r"></div>
+            <img id="img-insert" class="col-m-12" />
+        </div>
+        <div class="flex-r">
+            <button id="new-dog-image" class="space-top button-new-picture" onclick="alterarImagemRaca();" style="display:none;">VER MAIS FOTOS DA RAÇA</button>
+            <button id="btn-clear-two" class="space-top" style="display:none;" onclick="limparDadosFinal();">ADOTAR OUTRO</button>
+        </div>
+        <img id="img-insert-new" class="col-m-12 col-d-2 space-top" />
+    </section>
+    <footer>
+            <div class="contact ubuntu position-r">
+                <div class="list-contact col-m-12 b">Contato</div>
+                <div class="col-m-12 txtalign-center space-bottom">
+                    <p class="tel-info-footer b">Telefone</p>
+                    <span>(11) 9999-9999</span>
+                </div>
+                <div class="col-m-12 txtalign-center space-bottom">
+                    <p class="mail-info b"> Email</p>
+                    <span>info@meusite.com</span>
+                </div>
+                <div class="col-m-12 txtalign-center space-bottom">
+                    <p class="hour-info b"> Horário</p>
+                    <span>Seg - Sex: 9:00 - 20:00 <br /> Sáb: 9:00 - 16:00</span>
+                </div>
+                <div class="col-m-12 txtalign-center space-bottom">
+                    <p class="locale-info b">Área de Serviço</p>
+                    <span>São Paulo e interior</span>
+                </div>
+                <div class="col-m-12 flex-r social-media">
+                    <div class="space-media" onclick="socialNetwork()"><a href="#"><i class="fab fa-facebook"></a></i></div>
+                    <div class="space-media" onclick="socialNetwork()"><a href="#"></a><i class="fab fa-twitter"></a></i></div>
+                    <div class="space-media" onclick="socialNetwork()"><a href="#"></a><i class="fab fa-youtube"></a></i></div>
+                    <div class="space-media" onclick="socialNetwork()"><a href="#"></a><i class="fab fa-linkedin"></a></i></div>
+                </div>
+                <img src="img/custom/pictures/cachorro-2.png" alt="Cachorro-rodapé"
+                    class="col-m-8 col-d-2 col-t-5 position-a footer-img">
+            </div>
+            <script src="js/script.js"></script>
+        </footer>
+</body>
+
+</html>
